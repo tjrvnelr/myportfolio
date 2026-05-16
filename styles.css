@@ -460,7 +460,7 @@ ul {
   font-family: var(--serif);
   font-size: 7rem;
   color: var(--accent);
-  opacity: .70;
+  opacity: 0.7;
   overflow: hidden;
   border: 1px solid var(--border);
 }
@@ -474,42 +474,6 @@ ul {
 .about-bio strong {
   font-weight: 500;
   color: var(--text);
-}
-.skills-title {
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  margin-bottom: 1.2rem;
-  margin-top: 2rem;
-}
-.skills-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.6rem;
-}
-.skill-chip {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 0.82rem;
-  color: #4a4a46;
-  padding: 0.6rem 0.9rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg);
-  transition:
-    border-color var(--transition),
-    color var(--transition);
-}
-.skill-chip:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-.skill-chip-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-  flex-shrink: 0;
 }
 
 /* Resume */
@@ -584,31 +548,31 @@ ul {
 .timeline-role {
   font-size: 0.82rem;
   color: var(--muted);
-  margin-bottom: .1rem;
+  margin-bottom: 0.1rem;
 }
 .timeline-achievement {
-    width: 500px;
+  width: 500px;
 }
 .timeline-achievement h2 {
-    font-size: 1rem;
-    font-family: var(--sans);
+  font-size: 1rem;
+  font-family: var(--sans);
 }
 .certificate-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
 }
 .certificate-item {
-    color: var(--muted);
-    font-size: 0.90rem;
-    font-family: var(--sans);
-    margin-top: -5px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-family: var(--sans);
+  margin-top: -5px;
 }
 .timeline-certificate img {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
-    cursor: pointer;
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .timeline-org {
   font-size: 1.1rem;
@@ -626,26 +590,6 @@ ul {
   margin-bottom: 1.2rem;
   padding-bottom: 0.8rem;
   border-bottom: 1.5px solid var(--border);
-}
-.skills-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-.skills-tag {
-  font-size: 0.78rem;
-  font-weight: 400;
-  color: var(--text);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 0.35rem 0.85rem;
-  border-radius: 99px;
-  transition: all var(--transition);
-}
-.skills-tag:hover {
-  background: var(--accent-lt);
-  border-color: var(--accent);
-  color: var(--accent-dk);
 }
 
 /* Projects */
@@ -767,6 +711,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  cursor: pointer;
 }
 .contact-link {
   display: flex;
