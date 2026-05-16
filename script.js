@@ -1,105 +1,107 @@
-// Nav scroll state
-const navEl = document.getElementById("nav");
-window.addEventListener(
-  "scroll",
-  () => {
-    navEl.classList.toggle("scrolled", window.scrollY > 10);
-  },
-  { passive: true },
-);
+/* ─── Dark / Light mode toggle ───────────────────────────────── */
+(function initTheme() {
+  const stored = localStorage.getItem("theme");
+  if (stored) {
+    document.documentElement.setAttribute("data-theme", stored);
+  } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
+})();
 
-// Active nav link via IntersectionObserver
-const sections = document.querySelectorAll("section[id]");
-const navAnchors = document.querySelectorAll("#navLinks a, #mobileNav a");
-
-const sectionObs = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) {
-        navAnchors.forEach((a) => {
-          a.classList.toggle(
-            "active",
-            a.getAttribute("href") === "#" + e.target.id,
-          );
-        });
-      }
-    });
-  },
-  { rootMargin: "-40% 0px -55% 0px" },
-);
-
-sections.forEach((s) => sectionObs.observe(s));
-
-// Hamburger menu
-const hamburger = document.getElementById("hamburger");
-const mobileNav = document.getElementById("mobileNav");
-
-hamburger.addEventListener("click", () => {
-  const isOpen = hamburger.classList.toggle("open");
-  mobileNav.classList.toggle("open", isOpen);
-  document.body.style.overflow = isOpen ? "hidden" : "";
+const themeToggle = document.getElementById("themeToggle");
+themeToggle && themeToggle.addEventListener("click", () => {
+  const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+  const next = isDark ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  localStorage.setItem("theme", next);
 });
 
-mobileNav.querySelectorAll("a").forEach((a) => {
-  a.addEventListener("click", () => {
-    hamburger.classList.remove("open");
-    mobileNav.classList.remove("open");
-    document.body.style.overflow = "";
-  });
-});
-
-// Reveal on scroll
-const revealEls = document.querySelectorAll(".reveal");
-const revealObs = new IntersectionObserver(
+/* ─── Reveal on scroll ───────────────────────────────────────── */
+const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((e) => {
       if (e.isIntersecting) {
         e.target.classList.add("visible");
-        revealObs.unobserve(e.target);
+        revealObserver.unobserve(e.target);
       }
     });
   },
-  { threshold: 0.12 },
+  { threshold: 0.12 }
 );
+document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
 
-revealEls.forEach((el) => revealObs.observe(el));
+/* ─── Nav scroll state ───────────────────────────────────────── */
+const nav = document.getElementById("nav");
+window.addEventListener("scroll", () => {
+  nav.classList.toggle("scrolled", window.scrollY > 20);
+}, { passive: true });
 
-// Form validation
+/* ─── Active nav link ────────────────────────────────────────── */
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+const sectionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        const id = e.target.id;
+        navLinks.forEach((a) => {
+          a.classList.toggle("active", a.getAttribute("href") === `#${id}`);
+        });
+      }
+    });
+  },
+  { rootMargin: "-40% 0px -55% 0px" }
+);
+sections.forEach((s) => sectionObserver.observe(s));
+
+/* ─── Hamburger / mobile drawer ─────────────────────────────── */
+const hamburger = document.getElementById("hamburger");
+const mobileNav = document.getElementById("mobileNav");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("open");
+  mobileNav.classList.toggle("open");
+});
+
+// Close drawer on link click
+mobileNav.querySelectorAll("a").forEach((a) => {
+  a.addEventListener("click", () => {
+    hamburger.classList.remove("open");
+    mobileNav.classList.remove("open");
+  });
+});
+
+// Close on outside click
+document.addEventListener("click", (e) => {
+  if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+    hamburger.classList.remove("open");
+    mobileNav.classList.remove("open");
+  }
+});
+
+/* ─── Contact form validation ────────────────────────────────── */
 const form = document.getElementById("contactForm");
+const success = document.getElementById("formSuccess");
 const submitBtn = document.getElementById("submitBtn");
-const successEl = document.getElementById("formSuccess");
 
-function validateEmail(val) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
-}
-function setError(inputId, errId, msg) {
-  const inp = document.getElementById(inputId);
-  const err = document.getElementById(errId);
+function setError(inputId, errorId, msg) {
+  const input = document.getElementById(inputId);
+  const error = document.getElementById(errorId);
   if (msg) {
-    inp.classList.add("error");
-    err.textContent = msg;
-    return false;
+    input.classList.add("error");
+    error.textContent = msg;
   } else {
-    inp.classList.remove("error");
-    err.textContent = "";
-    return true;
+    input.classList.remove("error");
+    error.textContent = "";
   }
 }
 
-// Live validation
-["fname", "email", "message"].forEach((id) => {
-  document.getElementById(id).addEventListener("input", () => {
-    clearError(id);
-  });
-});
-function clearError(id) {
-  const inp = document.getElementById(id);
-  const err = document.getElementById(id + "-error");
-  inp.classList.remove("error");
-  if (err) err.textContent = "";
+function validateEmail(v) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 }
 
-form.addEventListener("submit", (e) => {
+form && form.addEventListener("submit", (e) => {
   e.preventDefault();
   let valid = true;
 
@@ -107,44 +109,38 @@ form.addEventListener("submit", (e) => {
   const email = document.getElementById("email").value.trim();
   const message = document.getElementById("message").value.trim();
 
-  valid =
-    setError(
-      "fname",
-      "fname-error",
-      !fname ? "Please enter your first name." : "",
-    ) && valid;
-  valid =
-    setError(
-      "email",
-      "email-error",
-      !email
-        ? "Email is required."
-        : !validateEmail(email)
-          ? "Please enter a valid email address."
-          : "",
-    ) && valid;
-  valid =
-    setError(
-      "message",
-      "message-error",
-      !message
-        ? "Message cannot be empty."
-        : message.length < 10
-          ? "Message is too short (min 10 characters)."
-          : "",
-    ) && valid;
+  if (!fname) {
+    setError("fname", "fname-error", "First name is required.");
+    valid = false;
+  } else {
+    setError("fname", "fname-error", "");
+  }
+
+  if (!email) {
+    setError("email", "email-error", "Email address is required.");
+    valid = false;
+  } else if (!validateEmail(email)) {
+    setError("email", "email-error", "Please enter a valid email address.");
+    valid = false;
+  } else {
+    setError("email", "email-error", "");
+  }
+
+  if (!message) {
+    setError("message", "message-error", "Message cannot be empty.");
+    valid = false;
+  } else {
+    setError("message", "message-error", "");
+  }
 
   if (!valid) return;
 
   // Simulate send
   submitBtn.disabled = true;
-  submitBtn.innerHTML = `
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 0.8s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
-        Sending…
-      `;
+  submitBtn.textContent = "Sending…";
 
   setTimeout(() => {
     form.style.display = "none";
-    successEl.classList.add("show");
-  }, 1400);
+    success.classList.add("show");
+  }, 1000);
 });
