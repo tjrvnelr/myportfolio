@@ -25,7 +25,6 @@
 </head>
 
 <body>
-
   <!-- ─── Nav ──────────────────────────────────────────────────────────── -->
   <nav id="nav">
     <div class="container nav-inner">
@@ -37,29 +36,31 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
-        <span class="theme-toggle-knob">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5" />
-            <line x1="12" y1="1" x2="12" y2="3" />
-            <line x1="12" y1="21" x2="12" y2="23" />
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-            <line x1="1" y1="12" x2="3" y2="12" />
-            <line x1="21" y1="12" x2="23" y2="12" />
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-          </svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-          </svg>
-        </span>
-      </button>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+          <span class="theme-toggle-knob">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -72,517 +73,651 @@
     <a href="#contact">Contact</a>
   </div>
 
-  <!-- ─── Hero ─────────────────────────────────────────────────────────── -->
-  <section id="home">
-    <div class="hero-bg">
-      <div class="hero-blob hero-blob-1"></div>
-      <div class="hero-blob hero-blob-2"></div>
-      <div class="hero-noise"></div>
-    </div>
+  <main>
+    <!-- ─── Hero ─────────────────────────────────────────────────────────── -->
+    <section id="home">
+      <div class="hero-bg">
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+        <div class="hero-noise"></div>
+      </div>
 
-    <div class="container hero-grid">
-      <!-- Text -->
-      <div class="hero-text">
-        <span class="hero-eyebrow reveal">Available for freelance work</span>
-        <h1 class="hero-name reveal reveal-delay-1">Tjay<em>Eleria</em>
-        </h1>
-        <p class="hero-tagline reveal reveal-delay-2">
-          <strong>Web Developer &amp; UI/UX Designer</strong> crafting clean,
-          thoughtful digital experiences — from idea to pixel-perfect code.
-        </p>
-        <div class="hero-actions reveal reveal-delay-3">
-          <a href="#projects" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1 class="hero-name reveal reveal-delay-1">Tjay<em>Eleria</em></h1>
+          <p class="hero-tagline reveal reveal-delay-2">
+            <strong>Web Developer &amp; UI/UX Designer</strong> crafting
+            clean, thoughtful digital experiences — from idea to pixel-perfect
+            code.
+          </p>
+          <div class="hero-actions reveal reveal-delay-3">
+            <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          </div>
         </div>
-        <div class="hero-chips reveal reveal-delay-4">
-          <span class="chip">HTML / CSS</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">React</span>
-          <span class="chip">UI Design</span>
+
+        <div class="hero-visual reveal reveal-delay-2">
+          <div class="hero-card">
+            <div class="hero-card-inner">
+              <div class="hero-avatar">
+                <img src="/assets/images/1x1 ID.jpg" alt="Tjay Eleria" />
+              </div>
+            </div>
+            <div class="hero-card-deco"></div>
+          </div>
         </div>
       </div>
 
-      <!-- Visual card -->
-      <div class="hero-visual reveal reveal-delay-2">
-        <div class="hero-card">
-          <div class="hero-card-inner">
-            <div class="hero-avatar">
+      <div class="hero-scroll">
+        <div class="hero-scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ─── About ─────────────────────────────────────────────────────────── -->
+    <section id="about" class="section">
+      <div class="container">
+        <!-- About Top Grid -->
+        <div class="about-grid">
+          <div class="about-img-wrap reveal">
+            <div class="about-img">
               <img src="/assets/images/1x1 ID.jpg" alt="Tjay Eleria" />
             </div>
-            <div class="hero-card-tag">
-              <span class="hero-card-dot"></span>
-              Open to opportunities
+            <div class="about-img-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+              BSIT Student
             </div>
           </div>
-          <div class="hero-card-deco"></div>
-        </div>
-      </div>
-    </div>
 
-    <div class="hero-scroll">
-      <div class="hero-scroll-line"></div>
-      <span>Scroll</span>
-    </div>
-  </section>
-
-  <!-- ─── About ─────────────────────────────────────────────────────────── -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="about-grid">
-
-        <!-- Image -->
-        <div class="about-img-wrap reveal">
-          <div class="about-img">
-            <img src="/assets/images/1x1 ID.jpg" alt="Tjay Eleria" />
-          </div>
-          <div class="about-img-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2L2 7l10 5 10-5-10-5z" />
-              <path d="M2 17l10 5 10-5" />
-              <path d="M2 12l10 5 10-5" />
-            </svg>
-            BSIT Student
+          <div class="about-content">
+            <p class="section-label reveal">About Me</p>
+            <h2 class="section-title reveal reveal-delay-1">
+              Designing Clean<br />Digital Experiences.
+            </h2>
+            <div class="divider reveal reveal-delay-2"></div>
+            <p class="about-bio reveal reveal-delay-2">
+              Hi, I'm <strong>Tjay Eleria</strong> — I create modern and
+              responsive websites with clean, user-friendly designs. My focus
+              is building digital experiences that are simple, functional, and
+              visually appealing. I enjoy turning ideas into interactive
+              websites through thoughtful UI/UX design and clean code. As a
+              web development student, I continue learning new technologies to
+              improve my skills and creativity.
+            </p>
           </div>
         </div>
 
-        <!-- Content -->
-        <div>
-          <p class="section-label reveal">About Me</p>
+        <!-- Interests (Now cleanly grouped within About) -->
+        <div class="interests-container">
+          <p class="section-label reveal">Passions & Hobbies</p>
           <h2 class="section-title reveal reveal-delay-1">
-            Designing Clean<br>Digital Experiences.
+            My Interest
           </h2>
           <div class="divider reveal reveal-delay-2"></div>
-          <p class="about-bio reveal reveal-delay-2">
-            Hi, I'm <strong>Tjay Eleria</strong> — I create modern and responsive websites
-            with clean, user-friendly designs. My focus is building digital experiences
-            that are simple, functional, and visually appealing. I enjoy turning ideas
-            into interactive websites through thoughtful UI/UX design and clean code.
-            As a web development student, I continue learning new technologies to
-            improve my skills and creativity.
-          </p>
-          <div class="about-stats reveal reveal-delay-3">
-            <div class="about-stat">
-              <span class="about-stat-num">2+</span>
-              <span class="about-stat-label">Years Learning</span>
+
+          <div class="interest-tabs reveal reveal-delay-2">
+            <button class="interest-tab active" data-tab="all">
+              <span class="tab-icon">✦</span> All
+            </button>
+            <button class="interest-tab" data-tab="tech">
+              <span class="tab-icon">⚡</span> Tech
+            </button>
+            <button class="interest-tab" data-tab="creative">
+              <span class="tab-icon">🎨</span> Creative
+            </button>
+            <button class="interest-tab" data-tab="lifestyle">
+              <span class="tab-icon">🌿</span> Lifestyle
+            </button>
+          </div>
+
+          <div class="interest-grid" id="interestGrid">
+            <!-- Tech -->
+            <div class="interest-card reveal" data-category="tech">
+              <div class="interest-card-header">
+                <span class="interest-emoji">🤖</span>
+                <span class="interest-cat-badge tech">Tech</span>
+              </div>
+              <h3 class="interest-card-title">AI & Machine Learning</h3>
+              <p class="interest-card-desc">
+                Fascinated by how AI models learn and adapt. I explore tools
+                like ChatGPT, Claude, and emerging LLM research in my spare
+                time.
+              </p>
+              <div class="interest-chips">
+                <span>LLMs</span><span>Prompt Eng.</span><span>AI Ethics</span>
+              </div>
             </div>
-            <div class="about-stat-sep"></div>
-            <div class="about-stat">
-              <span class="about-stat-num">4+</span>
-              <span class="about-stat-label">Projects Built</span>
+
+            <div class="interest-card reveal reveal-delay-1" data-category="tech">
+              <div class="interest-card-header">
+                <span class="interest-emoji">🌐</span>
+                <span class="interest-cat-badge tech">Tech</span>
+              </div>
+              <h3 class="interest-card-title">Open Source</h3>
+              <p class="interest-card-desc">
+                I follow open-source communities and contribute where I can.
+                The collaborative spirit of open source deeply inspires how I
+                approach code.
+              </p>
+              <div class="interest-chips">
+                <span>GitHub</span><span>Linux</span><span>Dev Tools</span>
+              </div>
             </div>
-            <div class="about-stat-sep"></div>
-            <div class="about-stat">
-              <span class="about-stat-num">2</span>
-              <span class="about-stat-label">Certifications</span>
+
+            <div class="interest-card reveal reveal-delay-2" data-category="tech">
+              <div class="interest-card-header">
+                <span class="interest-emoji">🔒</span>
+                <span class="interest-cat-badge tech">Tech</span>
+              </div>
+              <h3 class="interest-card-title">Cybersecurity</h3>
+              <p class="interest-card-desc">
+                Security-minded by nature. I enjoy learning about ethical
+                hacking concepts, network security, and how to build more
+                resilient applications.
+              </p>
+              <div class="interest-chips">
+                <span>Networking</span><span>CTF</span><span>OWASP</span>
+              </div>
+            </div>
+
+            <!-- Creative -->
+            <div class="interest-card reveal" data-category="creative">
+              <div class="interest-card-header">
+                <span class="interest-emoji">✏️</span>
+                <span class="interest-cat-badge creative">Creative</span>
+              </div>
+              <h3 class="interest-card-title">UI/UX Design Trends</h3>
+              <p class="interest-card-desc">
+                I obsessively study design trends — from glassmorphism to
+                bento grids. Dribbble and Behance are my daily rabbit holes.
+              </p>
+              <div class="interest-chips">
+                <span>Figma</span><span>Motion</span><span>Typography</span>
+              </div>
+            </div>
+
+            <div class="interest-card reveal reveal-delay-1" data-category="creative">
+              <div class="interest-card-header">
+                <span class="interest-emoji">📸</span>
+                <span class="interest-cat-badge creative">Creative</span>
+              </div>
+              <h3 class="interest-card-title">Photography</h3>
+              <p class="interest-card-desc">
+                Capturing life through a lens — especially Baguio's misty
+                mornings and pine forests. I love street and landscape
+                photography.
+              </p>
+              <div class="interest-chips">
+                <span>Landscape</span><span>Street</span><span>Editing</span>
+              </div>
+            </div>
+
+            <div class="interest-card reveal reveal-delay-2" data-category="creative">
+              <div class="interest-card-header">
+                <span class="interest-emoji">🎵</span>
+                <span class="interest-cat-badge creative">Creative</span>
+              </div>
+              <h3 class="interest-card-title">Music</h3>
+              <p class="interest-card-desc">
+                Music fuels my focus sessions. I lean toward lo-fi hip-hop,
+                indie pop, and OPM — playlists always on while coding or
+                designing.
+              </p>
+              <div class="interest-chips">
+                <span>Lo-fi</span><span>Indie</span><span>OPM</span>
+              </div>
+            </div>
+
+            <!-- Lifestyle -->
+            <div class="interest-card reveal" data-category="lifestyle">
+              <div class="interest-card-header">
+                <span class="interest-emoji">☕</span>
+                <span class="interest-cat-badge lifestyle">Lifestyle</span>
+              </div>
+              <h3 class="interest-card-title">Coffee Culture</h3>
+              <p class="interest-card-desc">
+                Baguio's café scene is unmatched. I'm a proud coffee
+                enthusiast — always hunting for the next great pour-over or
+                single origin brew.
+              </p>
+              <div class="interest-chips">
+                <span>Pour-over</span><span>Local Cafés</span><span>Latte Art</span>
+              </div>
+            </div>
+
+            <div class="interest-card reveal reveal-delay-1" data-category="lifestyle">
+              <div class="interest-card-header">
+                <span class="interest-emoji">🎮</span>
+                <span class="interest-cat-badge lifestyle">Lifestyle</span>
+              </div>
+              <h3 class="interest-card-title">Gaming</h3>
+              <p class="interest-card-desc">
+                A casual gamer at heart. I enjoy story-driven RPGs and
+                strategy games. Gaming has surprisingly influenced how I think
+                about UX flows.
+              </p>
+              <div class="interest-chips">
+                <span>RPG</span><span>Strategy</span><span>Indie Games</span>
+              </div>
+            </div>
+
+            <div class="interest-card reveal reveal-delay-2" data-category="lifestyle">
+              <div class="interest-card-header">
+                <span class="interest-emoji">🌿</span>
+                <span class="interest-cat-badge lifestyle">Lifestyle</span>
+              </div>
+              <h3 class="interest-card-title">Nature & Trails</h3>
+              <p class="interest-card-desc">
+                Living in Baguio means pine trees and mountain trails at every
+                turn. Hiking clears my head and gives me space to think
+                creatively.
+              </p>
+              <div class="interest-chips">
+                <span>Hiking</span><span>Mountains</span><span>Outdoors</span>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ─── Resume ────────────────────────────────────────────────────────── -->
-  <section id="resume" class="section resume-section">
-    <div class="container">
-      <p class="section-label reveal">What I Can Do</p>
-      <h2 class="section-title reveal reveal-delay-1">Resume</h2>
-      <div class="divider reveal reveal-delay-2"></div>
+    <!-- ─── Resume ────────────────────────────────────────────────────────── -->
+    <section id="resume" class="section resume-section">
+      <div class="container">
+        <p class="section-label reveal">What I Can Do</p>
+        <h2 class="section-title reveal reveal-delay-1">Resume</h2>
+        <div class="divider reveal reveal-delay-2"></div>
 
-      <div class="resume-grid">
-
-        <!-- ── Experience ── -->
-        <div class="resume-col reveal">
-          <h3 class="resume-col-title">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="7" width="20" height="14" rx="2" />
-              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-            </svg>
-            Experience
-          </h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-left">
-                <div class="timeline-dot"></div>
-                <div class="timeline-line"></div>
-              </div>
-              <div class="timeline-content">
-                <div class="timeline-date">2022 — Present</div>
-                <div class="timeline-org">Verda Studio, San Francisco</div>
-                <div class="timeline-role">Senior Product Designer</div>
-                <div class="timeline-desc">
-                  Led the end-to-end redesign of the core product, improving user
-                  retention by 34%. Established a component library used across three
-                  product teams, reducing design-to-dev handoff time by half.
+        <div class="resume-grid">
+          <!-- Experience -->
+          <div class="resume-col reveal">
+            <h3 class="resume-col-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg>
+              Experience
+            </h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-left">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-line"></div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ── Education ── -->
-        <div class="resume-col reveal reveal-delay-1">
-          <h3 class="resume-col-title">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z" />
-              <path d="M6 12v5c3 3 9 3 12 0v-5" />
-            </svg>
-            Education
-          </h3>
-          <div class="timeline">
-
-            <div class="timeline-item">
-              <div class="timeline-left">
-                <div class="timeline-dot"></div>
-                <div class="timeline-line"></div>
-              </div>
-              <div class="timeline-content">
-                <div class="timeline-date">20XX — Present</div>
-                <div class="timeline-location">Baguio City, Philippines</div>
-                <div class="timeline-org">University of the Cordilleras</div>
-                <div class="timeline-role">Bachelor of Science in Information Technology</div>
-
-                <!-- Certificates -->
-                <div class="cert-block">
-                  <p class="cert-label">Certificates</p>
-                  <div class="cert-grid">
-                    <a class="cert-card" href="/assets/images/introduction-to-networks.png" target="_blank">
-                      <div class="cert-thumb">
-                        <img src="/assets/images/introduction-to-networks.png" alt="Introduction to Networks" />
-                        <div class="cert-overlay">
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                            <polyline points="15 3 21 3 21 9" />
-                            <line x1="10" y1="14" x2="21" y2="3" />
-                          </svg>
-                        </div>
-                      </div>
-                      <span>Introduction to Networks</span>
-                    </a>
-                    <a class="cert-card" href="/assets/images/legacy-responsive-web-design.png" target="_blank">
-                      <div class="cert-thumb">
-                        <img src="/assets/images/legacy-responsive-web-design.png" alt="Legacy Responsive Web Design" />
-                        <div class="cert-overlay">
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                            <polyline points="15 3 21 3 21 9" />
-                            <line x1="10" y1="14" x2="21" y2="3" />
-                          </svg>
-                        </div>
-                      </div>
-                      <span>Legacy Responsive Web Design</span>
-                    </a>
+                <div class="timeline-content">
+                  <div class="timeline-date">2022 — Present</div>
+                  <div class="timeline-org">Lorem ipsum dolor sit amet.</div>
+                  <div class="timeline-role">Lorem ipsum dolor sit amet.</div>
+                  <div class="timeline-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="timeline-item">
-              <div class="timeline-left">
-                <div class="timeline-dot"></div>
+          <!-- Education -->
+          <div class="resume-col reveal reveal-delay-1">
+            <h3 class="resume-col-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+              Education
+            </h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-left">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-content">
+                  <div class="timeline-date">20XX — Present</div>
+                  <div class="timeline-location">
+                    Baguio City, Philippines
+                  </div>
+                  <div class="timeline-org">
+                    University of the Cordilleras
+                  </div>
+                  <div class="timeline-role">
+                    Bachelor of Science in Information Technology
+                  </div>
+
+                  <!-- Certificates -->
+                  <div class="cert-block">
+                    <p class="cert-label">Certificates</p>
+                    <div class="cert-grid">
+                      <a class="cert-card" href="/assets/images/introduction-to-networks.png" target="_blank">
+                        <div class="cert-thumb">
+                          <img src="/assets/images/introduction-to-networks.png" alt="Introduction to Networks" />
+                          <div class="cert-overlay">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2">
+                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                              <polyline points="15 3 21 3 21 9" />
+                              <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                          </div>
+                        </div>
+                        <span>Intro to Networks</span>
+                      </a>
+                      <a class="cert-card" href="/assets/images/legacy-responsive-web-design.png" target="_blank">
+                        <div class="cert-thumb">
+                          <img src="/assets/images/legacy-responsive-web-design.png"
+                            alt="Legacy Responsive Web Design" />
+                          <div class="cert-overlay">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2">
+                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                              <polyline points="15 3 21 3 21 9" />
+                              <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                          </div>
+                        </div>
+                        <span>Responsive Web Design</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="timeline-content">
-                <div class="timeline-date">2023</div>
-                <div class="timeline-location">San Fabian, Philippines</div>
-                <div class="timeline-org">Anonang National High School</div>
-                <div class="timeline-role">Information and Communications Technology</div>
+
+              <div class="timeline-item">
+                <div class="timeline-left">
+                  <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-content">
+                  <div class="timeline-date">2023</div>
+                  <div class="timeline-location">San Fabian, Philippines</div>
+                  <div class="timeline-org">Anonang National High School</div>
+                  <div class="timeline-role">
+                    Information and Communications Technology
+                  </div>
+                </div>
               </div>
             </div>
-
           </div>
         </div>
 
-      </div><!-- /resume-grid -->
-
-      <!-- ── Skills ── (outside the grid, full-width) -->
-      <div class="skills-block reveal">
-        <h3 class="resume-col-title skills-col-title">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="16 18 22 12 16 6" />
-            <polyline points="8 6 2 12 8 18" />
-          </svg>
-          Skills
-        </h3>
-        <div class="skills-grid">
-          <div class="skill-group">
-            <p class="skill-group-label">Languages</p>
-            <div class="skill-tags">
-              <span class="skill-tag">HTML</span>
-              <span class="skill-tag">CSS</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">Python</span>
+        <!-- Skills Block -->
+        <div class="skills-block reveal">
+          <h3 class="resume-col-title skills-col-title">
+            Skills
+          </h3>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <p class="skill-group-label">Languages</p>
+              <div class="skill-tags">
+                <span class="skill-tag">HTML</span><span class="skill-tag">CSS</span>
+                <span class="skill-tag">JavaScript</span><span class="skill-tag">Java</span>
+                <span class="skill-tag">Python</span>
+              </div>
             </div>
-          </div>
-          <div class="skill-group">
-            <p class="skill-group-label">Technologies &amp; Frameworks</p>
-            <div class="skill-tags">
-              <span class="skill-tag">React.js</span>
-              <span class="skill-tag">Bootstrap</span>
-              <span class="skill-tag">PHP</span>
-              <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">MSSQL</span>
-              <span class="skill-tag">MySQL</span>
+            <div class="skill-group">
+              <p class="skill-group-label">Technologies &amp; Frameworks</p>
+              <div class="skill-tags">
+                <span class="skill-tag">React.js</span><span class="skill-tag">Bootstrap</span>
+                <span class="skill-tag">PHP</span><span class="skill-tag">Node.js</span>
+                <span class="skill-tag">MSSQL</span><span class="skill-tag">MySQL</span>
+              </div>
             </div>
-          </div>
-          <div class="skill-group">
-            <p class="skill-group-label">Design &amp; Tools</p>
-            <div class="skill-tags">
-              <span class="skill-tag">UI/UX Design</span>
-              <span class="skill-tag">Figma</span>
-              <span class="skill-tag">Responsive Design</span>
-              <span class="skill-tag">Git</span>
+            <div class="skill-group">
+              <p class="skill-group-label">Design &amp; Tools</p>
+              <div class="skill-tags">
+                <span class="skill-tag">UI/UX Design</span><span class="skill-tag">Figma</span>
+                <span class="skill-tag">Responsive Design</span><span class="skill-tag">Git</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- ─── Projects ─────────────────────────────────────────────────────── -->
+    <section id="projects" class="section">
+      <div class="container">
+        <p class="section-label reveal">Work</p>
+        <h2 class="section-title reveal reveal-delay-1">My Projects</h2>
+        <div class="divider reveal reveal-delay-2"></div>
 
-  <!-- ─── Projects ─────────────────────────────────────────────────────── -->
-  <section id="projects" class="section">
-    <div class="container">
-      <p class="section-label reveal">Work</p>
-      <h2 class="section-title reveal reveal-delay-1">My Projects</h2>
-      <div class="divider reveal reveal-delay-2"></div>
-
-      <div class="projects-grid">
-
-        <!-- Project 1 -->
-        <div class="project-card reveal">
-          <a href="https://lifespeedbank.vercel.app/" target="_blank" class="project-thumb project-thumb-1">
-            <img src="/assets/images/projects-lifespeedbank.png" alt="Lifespeedbank website preview" />
-            <div class="project-thumb-overlay">
-              <span class="project-visit-btn">Visit Site →</span>
-            </div>
-          </a>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-              <span class="project-tag">JavaScript</span>
-            </div>
-            <h3 class="project-title">Lifespeedbank</h3>
-            <p class="project-desc">A modern digital banking website offering secure, user-friendly financial
-              services with a clean interface for savings, transfers, and online transactions.</p>
-            <a href="https://lifespeedbank.vercel.app/" target="_blank" class="project-link">
-              View Website
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <a href="https://lifespeedbank.vercel.app/" target="_blank" class="project-thumb project-thumb-1">
+              <img src="/assets/images/projects-lifespeedbank.png" alt="Lifespeedbank website preview" />
+              <div class="project-thumb-overlay">
+                <span class="project-visit-btn">Visit Site →</span>
+              </div>
             </a>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card reveal reveal-delay-1">
-          <a href="https://promptgptai.vercel.app/" target="_blank" class="project-thumb project-thumb-2">
-            <img src="/assets/images/projects-promptgpt.png" alt="PromptGPT website preview" />
-            <div class="project-thumb-overlay">
-              <span class="project-visit-btn">Visit Site →</span>
-            </div>
-          </a>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-              <span class="project-tag">JavaScript</span>
-            </div>
-            <h3 class="project-title">PromptGPT</h3>
-            <p class="project-desc">An AI-powered prompt sharing platform for discovering, creating, and
-              organizing creative prompts for ChatGPT and other AI models.</p>
-            <a href="https://promptgptai.vercel.app/" target="_blank" class="project-link">
-              View Website
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 3 — placeholder, update when ready -->
-        <div class="project-card project-card-placeholder reveal reveal-delay-2">
-          <div class="project-thumb project-thumb-3">
-            <div class="project-placeholder-inner">
-              <span class="project-placeholder-icon">🛍️</span>
-              <span class="project-placeholder-text">Coming Soon</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">Webflow</span>
-              <span class="project-tag">E-commerce</span>
-            </div>
-            <h3 class="project-title">Maison Brand Store</h3>
-            <p class="project-desc">A luxury lifestyle brand's online flagship store with editorial flair,
-              custom animations, scroll storytelling, and a curated product experience.</p>
-            <span class="project-link project-link-muted">
-              In Progress
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
-            </span>
-          </div>
-        </div>
-
-        <!-- Project 4 — placeholder, update when ready -->
-        <div class="project-card project-card-placeholder reveal reveal-delay-3">
-          <div class="project-thumb project-thumb-4">
-            <div class="project-placeholder-inner">
-              <span class="project-placeholder-icon">📱</span>
-              <span class="project-placeholder-text">Coming Soon</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">React Native</span>
-              <span class="project-tag">Figma</span>
-            </div>
-            <h3 class="project-title">Bloom Wellness App</h3>
-            <p class="project-desc">A mindfulness and habit-tracking mobile app with a soothing visual identity.
-              Designed full-flow UX from onboarding to daily check-in, prototyped in Figma.</p>
-            <span class="project-link project-link-muted">
-              In Progress
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
-            </span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── Contact ───────────────────────────────────────────────────────── -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <p class="section-label reveal">Say Hello</p>
-      <h2 class="section-title reveal reveal-delay-1">Let's Work Together.</h2>
-      <div class="divider reveal reveal-delay-2"></div>
-
-      <div class="contact-grid">
-
-        <!-- Info -->
-        <div class="reveal">
-          <p class="contact-desc">
-            Whether you have a project in mind, a question, or just want to connect —
-            my inbox is always open. I'll get back to you within 24 hours.
-          </p>
-          <div class="contact-links">
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tjayeleria@gmail.com" target="_blank"
-              class="contact-link">
-              <div class="contact-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <rect x="2" y="4" width="20" height="16" rx="2" />
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="project-tag">HTML</span><span class="project-tag">CSS</span><span
+                  class="project-tag">JavaScript</span>
+              </div>
+              <h3 class="project-title">Lifespeedbank</h3>
+              <p class="project-desc">
+                A modern digital banking website offering secure,
+                user-friendly financial services with a clean interface for
+                savings, transfers, and online transactions.
+              </p>
+              <a href="https://lifespeedbank.vercel.app/" target="_blank" class="project-link">
+                View Website
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </div>
-              <div>
-                <span class="contact-link-label">Email</span>
-                <span class="contact-link-value">tjayeleria@gmail.com</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card reveal reveal-delay-1">
+            <a href="https://promptgptai.vercel.app/" target="_blank" class="project-thumb project-thumb-2">
+              <img src="/assets/images/projects-promptgpt.png" alt="PromptGPT website preview" />
+              <div class="project-thumb-overlay">
+                <span class="project-visit-btn">Visit Site →</span>
               </div>
             </a>
-            <div class="contact-link">
-              <div class="contact-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                  <circle cx="12" cy="10" r="3" />
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="project-tag">HTML</span><span class="project-tag">CSS</span><span
+                  class="project-tag">JavaScript</span>
+              </div>
+              <h3 class="project-title">PromptGPT</h3>
+              <p class="project-desc">
+                An AI-powered prompt sharing platform for discovering,
+                creating, and organizing creative prompts for ChatGPT and
+                other AI models.
+              </p>
+              <a href="https://promptgptai.vercel.app/" target="_blank" class="project-link">
+                View Website
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </div>
-              <div>
-                <span class="contact-link-label">Location</span>
-                <span class="contact-link-value">San Fabian, Philippines</span>
-              </div>
+              </a>
             </div>
           </div>
 
-          <div class="social-row">
-            <a href="https://github.com/tjrvnelr" class="social-btn" title="GitHub" target="_blank">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path
-                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                <path d="M9 18c-4.51 2-5-2-7-2" />
-              </svg>
-              <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/tjrvnelr/" class="social-btn" title="LinkedIn" target="_blank">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect x="2" y="9" width="4" height="12" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://www.instagram.com/tjrvnelr/" class="social-btn" title="Instagram" target="_blank">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <rect x="2" y="2" width="20" height="20" rx="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="1.5" />
-              </svg>
-              <span>Instagram</span>
-            </a>
+          <!-- <div class="project-card project-card-placeholder reveal reveal-delay-2">
+            <div class="project-thumb project-thumb-3">
+              <div class="project-placeholder-inner">
+                <span class="project-placeholder-icon">🛍️</span>
+                <span class="project-placeholder-text">Coming Soon</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="project-tag">Webflow</span><span class="project-tag">E-commerce</span>
+              </div>
+              <h3 class="project-title">Maison Brand Store</h3>
+              <p class="project-desc">
+                A luxury lifestyle brand's online flagship store with
+                editorial flair, custom animations, scroll storytelling, and a
+                curated product experience.
+              </p>
+              <span class="project-link project-link-muted">
+                In Progress
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </span>
+            </div>
           </div>
+
+          <div class="project-card project-card-placeholder reveal reveal-delay-3">
+            <div class="project-thumb project-thumb-4">
+              <div class="project-placeholder-inner">
+                <span class="project-placeholder-icon">📱</span>
+                <span class="project-placeholder-text">Coming Soon</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="project-tag">React Native</span><span class="project-tag">Figma</span>
+              </div>
+              <h3 class="project-title">Bloom Wellness App</h3>
+              <p class="project-desc">
+                A mindfulness and habit-tracking mobile app with a soothing
+                visual identity. Designed full-flow UX from onboarding to
+                daily check-in, prototyped in Figma.
+              </p>
+              <span class="project-link project-link-muted">
+                In Progress
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </span>
+            </div>
+          </div> -->
         </div>
-
-        <!-- Form -->
-        <div class="reveal reveal-delay-2">
-          <div class="form-success" id="formSuccess">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="m22 11.08V12a10 10 0 1 1-5.93-9.14" />
-              <path d="m22 4-10 10-3-3" />
-            </svg>
-            Message sent! I'll be in touch soon.
-          </div>
-          <form class="contact-form" id="contactForm" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="fname">First Name <span class="form-required">*</span></label>
-                <input class="form-input" type="text" id="fname" name="fname" placeholder="Juan" />
-                <span class="form-error" id="fname-error"></span>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="lname">Last Name</label>
-                <input class="form-input" type="text" id="lname" name="lname" placeholder="Dela Cruz" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="email">Email Address <span class="form-required">*</span></label>
-              <input class="form-input" type="email" id="email" name="email" placeholder="juandelacruz@example.com" />
-              <span class="form-error" id="email-error"></span>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="subject">Subject</label>
-              <input class="form-input" type="text" id="subject" name="subject" placeholder="Project inquiry" />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="message">Message <span class="form-required">*</span></label>
-              <textarea class="form-textarea" id="message" name="message"
-                placeholder="Tell me about your project…"></textarea>
-              <span class="form-error" id="message-error"></span>
-            </div>
-            <button type="submit" class="form-btn" id="submitBtn">
-              Send Message
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="22" y1="2" x2="11" y2="13" />
-                <polygon points="22 2 15 22 11 13 2 9 22 2" />
-              </svg>
-            </button>
-          </form>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ─── Contact ───────────────────────────────────────────────────────── -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <p class="section-label reveal">Say Hello</p>
+        <h2 class="section-title reveal reveal-delay-1">
+          Let's Work Together.
+        </h2>
+        <div class="divider reveal reveal-delay-2"></div>
+
+        <div class="contact-grid">
+          <div class="reveal">
+            <p class="contact-desc">
+              Whether you have a project in mind, a question, or just want to
+              connect — my inbox is always open. I'll get back to you within
+              24 hours.
+            </p>
+            <div class="contact-links">
+              <a href="mailto:tjayeleria@gmail.com" class="contact-link">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-link-value">tjayeleria@gmail.com</span>
+                </div>
+              </a>
+              <div class="contact-link">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-link-value">San Fabian, Philippines</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-row">
+              <a href="https://github.com/tjrvnelr" class="social-btn" title="GitHub" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/tjrvnelr/" class="social-btn" title="LinkedIn" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://www.instagram.com/tjrvnelr/" class="social-btn" title="Instagram" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1.5" />
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-2">
+            <div class="form-success" id="formSuccess">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <path d="m22 4-10 10-3-3" />
+              </svg>
+              Message sent! I'll be in touch soon.
+            </div>
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="fname">First Name <span class="form-required">*</span></label>
+                  <input class="form-input" type="text" id="fname" name="fname" placeholder="Juan" />
+                  <span class="form-error" id="fname-error"></span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="lname">Last Name <span class="form-required">*</span></label>
+                  <input class="form-input" type="text" id="lname" name="lname" placeholder="Dela Cruz" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address <span class="form-required">*</span></label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="juandelacruz@example.com" />
+                <span class="form-error" id="email-error"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="subject">Subject <span class="form-required">*</span></label>
+                <input class="form-input" type="text" id="subject" name="subject" placeholder="Project inquiry" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Message <span class="form-required">*</span></label>
+                <textarea class="form-textarea" id="message" name="message"
+                  placeholder="Tell me about your project…"></textarea>
+                <span class="form-error" id="message-error"></span>
+              </div>
+              <button type="submit" class="form-btn" id="submitBtn">
+                Send Message
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ─── Footer ───────────────────────────────────────────────────────── -->
   <footer>
@@ -590,7 +725,7 @@
       <div class="footer-logo">Tjay<span>·</span>Eleria</div>
       <p class="footer-copy">© 2026 Tjay Eleria. All rights reserved.</p>
       <button class="footer-top-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M12 19V5M5 12l7-7 7 7" />
         </svg>
         Back to top

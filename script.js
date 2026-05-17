@@ -9,12 +9,14 @@
 })();
 
 const themeToggle = document.getElementById("themeToggle");
-themeToggle && themeToggle.addEventListener("click", () => {
-  const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-  const next = isDark ? "light" : "dark";
-  document.documentElement.setAttribute("data-theme", next);
-  localStorage.setItem("theme", next);
-});
+themeToggle &&
+  themeToggle.addEventListener("click", () => {
+    const isDark =
+      document.documentElement.getAttribute("data-theme") === "dark";
+    const next = isDark ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  });
 
 /* ─── Reveal on scroll ───────────────────────────────────────── */
 const revealObserver = new IntersectionObserver(
@@ -26,15 +28,21 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.12 }
+  { threshold: 0.12 },
 );
-document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+document
+  .querySelectorAll(".reveal")
+  .forEach((el) => revealObserver.observe(el));
 
 /* ─── Nav scroll state ───────────────────────────────────────── */
 const nav = document.getElementById("nav");
-window.addEventListener("scroll", () => {
-  nav.classList.toggle("scrolled", window.scrollY > 20);
-}, { passive: true });
+window.addEventListener(
+  "scroll",
+  () => {
+    nav.classList.toggle("scrolled", window.scrollY > 20);
+  },
+  { passive: true },
+);
 
 /* ─── Active nav link ────────────────────────────────────────── */
 const sections = document.querySelectorAll("section[id]");
@@ -51,7 +59,7 @@ const sectionObserver = new IntersectionObserver(
       }
     });
   },
-  { rootMargin: "-40% 0px -55% 0px" }
+  { rootMargin: "-40% 0px -55% 0px" },
 );
 sections.forEach((s) => sectionObserver.observe(s));
 
@@ -101,46 +109,82 @@ function validateEmail(v) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 }
 
-form && form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let valid = true;
+form &&
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let valid = true;
 
-  const fname = document.getElementById("fname").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
+    const fname = document.getElementById("fname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-  if (!fname) {
-    setError("fname", "fname-error", "First name is required.");
-    valid = false;
-  } else {
-    setError("fname", "fname-error", "");
-  }
+    if (!fname) {
+      setError("fname", "fname-error", "First name is required.");
+      valid = false;
+    } else {
+      setError("fname", "fname-error", "");
+    }
 
-  if (!email) {
-    setError("email", "email-error", "Email address is required.");
-    valid = false;
-  } else if (!validateEmail(email)) {
-    setError("email", "email-error", "Please enter a valid email address.");
-    valid = false;
-  } else {
-    setError("email", "email-error", "");
-  }
+    if (!email) {
+      setError("email", "email-error", "Email address is required.");
+      valid = false;
+    } else if (!validateEmail(email)) {
+      setError("email", "email-error", "Please enter a valid email address.");
+      valid = false;
+    } else {
+      setError("email", "email-error", "");
+    }
 
-  if (!message) {
-    setError("message", "message-error", "Message cannot be empty.");
-    valid = false;
-  } else {
-    setError("message", "message-error", "");
-  }
+    if (!message) {
+      setError("message", "message-error", "Message cannot be empty.");
+      valid = false;
+    } else {
+      setError("message", "message-error", "");
+    }
 
-  if (!valid) return;
+    if (!valid) return;
 
-  // Simulate send
-  submitBtn.disabled = true;
-  submitBtn.textContent = "Sending…";
+    // Simulate send
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending…";
 
-  setTimeout(() => {
-    form.style.display = "none";
-    success.classList.add("show");
-  }, 1000);
-});
+    setTimeout(() => {
+      form.style.display = "none";
+      success.classList.add("show");
+    }, 1000);
+  });
+
+/* ─── Interest Tab Filtering ─────────────────────────────────── */
+(function () {
+  const tabs = document.querySelectorAll(".interest-tab");
+  const cards = document.querySelectorAll(".interest-card");
+
+  if (!tabs.length) return;
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const selected = tab.dataset.tab;
+
+      // Update active tab
+      tabs.forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      // Filter cards
+      cards.forEach((card) => {
+        const category = card.dataset.category;
+        const match = selected === "all" || category === selected;
+
+        if (match) {
+          card.classList.remove("hidden", "fading");
+          // Re-trigger reveal if not yet visible
+          if (!card.classList.contains("visible")) {
+            card.classList.add("visible");
+          }
+        } else {
+          card.classList.add("fading");
+          setTimeout(() => card.classList.add("hidden"), 300);
+        }
+      });
+    });
+  });
+})();
